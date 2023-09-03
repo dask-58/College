@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# MAC CACHES
+
+.DS_Store

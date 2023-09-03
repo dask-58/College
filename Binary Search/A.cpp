@@ -1,3 +1,12 @@
+/*
+Code by proitdtderle
+*/
+
+
+
+
+
+
 /* This code is a C++ program that performs a binary search on an array.
 It takes an integer 'n' as input, representing the size of the array,
 and an integer 'k' representing the number of queries to perform.
@@ -83,3 +92,8 @@ int main() {
     }
     return 0;  // Exit the program.
 }
+
+
+/* Practice on 
+https://codeforces.com/edu/course/2/lesson/6/1
+*/
