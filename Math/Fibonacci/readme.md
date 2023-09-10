@@ -1,4 +1,6 @@
-//codeby proitdtdelre
+#MOST BASIC METHOD POSSIBLE TO FIND THE _n_<sup>th</sup> fibonacci number.
+
+<code>//codeby proitdtdelre
 #include <bits/stdc++.h>
 
 #define ll long long
@@ -21,4 +23,4 @@ int t;
 cin >> t;
 cout << fib(t) << "\n";
 return 0;
-}
+}</code>
