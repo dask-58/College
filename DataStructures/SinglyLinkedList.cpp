@@ -19,10 +19,11 @@ public:
     bool isEmpty(){
         return head == nullptr;
     }
-
+    
+    //inserts at tail
     void append(int data){
         Node* newNode = new Node(data);
-        if (isEmpty()) {
+        if(isEmpty()){
             head = newNode;
             return;
         }
@@ -32,7 +33,8 @@ public:
         }
         lastNode->next = newNode;
     }
-
+    
+    //inserts at head
     void prepend(int data){
         Node* newNode = new Node(data);
         newNode->next = head;
@@ -84,7 +86,7 @@ public:
     void display(){
         Node* current = head;
         while(current != nullptr){
-            std::cout << current->data << " -> ";
+            cout << current->data << " -> ";
             current = current->next;
         }
         cout << "nullptr" << '\n';
