@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int N = 200;
+const int N = 1e3 + 10;
 
 class Stack {
 private:

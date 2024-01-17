@@ -1,0 +1,28 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/dhruvkoli/Desktop/ds_algos/DataStructures/Stacks/StackArray'
+relocations:
+  - { offsetInCU: 0xDC, offset: 0xDC, size: 0x8, addend: 0x0, symName: __Z9StackInitP5Stack, symObjAddr: 0x0, symBinAddr: 0x100003A30, symSize: 0x20 }
+  - { offsetInCU: 0xE4, offset: 0xE4, size: 0x8, addend: 0x0, symName: __ZL1N, symObjAddr: 0x370, symBinAddr: 0x100003DC4, symSize: 0x0 }
+  - { offsetInCU: 0x90, offset: 0x90, size: 0x8, addend: 0x0, symName: __ZL1N, symObjAddr: 0x370, symBinAddr: 0x100003DC4, symSize: 0x0 }
+  - { offsetInCU: 0x10C, offset: 0x10C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2E4, symBinAddr: 0x100003D14, symSize: 0x8C }
+  - { offsetInCU: 0x114, offset: 0x114, size: 0x8, addend: 0x0, symName: __ZL1N, symObjAddr: 0x370, symBinAddr: 0x100003DC4, symSize: 0x0 }
+  - { offsetInCU: 0x158, offset: 0x158, size: 0x8, addend: 0x0, symName: __Z7displayPK5Stack, symObjAddr: 0x248, symBinAddr: 0x100003C78, symSize: 0x9C }
+  - { offsetInCU: 0x160, offset: 0x160, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2E4, symBinAddr: 0x100003D14, symSize: 0x8C }
+  - { offsetInCU: 0x1BB, offset: 0x1BB, size: 0x8, addend: 0x0, symName: __Z4peekPK5Stacki, symObjAddr: 0x1DC, symBinAddr: 0x100003C0C, symSize: 0x6C }
+  - { offsetInCU: 0x1C3, offset: 0x1C3, size: 0x8, addend: 0x0, symName: __Z7displayPK5Stack, symObjAddr: 0x248, symBinAddr: 0x100003C78, symSize: 0x9C }
+  - { offsetInCU: 0x21D, offset: 0x21D, size: 0x8, addend: 0x0, symName: __Z13BottomElementPK5Stack, symObjAddr: 0x18C, symBinAddr: 0x100003BBC, symSize: 0x50 }
+  - { offsetInCU: 0x225, offset: 0x225, size: 0x8, addend: 0x0, symName: __Z4peekPK5Stacki, symObjAddr: 0x1DC, symBinAddr: 0x100003C0C, symSize: 0x6C }
+  - { offsetInCU: 0x254, offset: 0x254, size: 0x8, addend: 0x0, symName: __Z10TopElementPK5Stack, symObjAddr: 0x130, symBinAddr: 0x100003B60, symSize: 0x5C }
+  - { offsetInCU: 0x25C, offset: 0x25C, size: 0x8, addend: 0x0, symName: __Z13BottomElementPK5Stack, symObjAddr: 0x18C, symBinAddr: 0x100003BBC, symSize: 0x50 }
+  - { offsetInCU: 0x282, offset: 0x282, size: 0x8, addend: 0x0, symName: __Z3popP5Stacki, symObjAddr: 0xD8, symBinAddr: 0x100003B08, symSize: 0x58 }
+  - { offsetInCU: 0x28A, offset: 0x28A, size: 0x8, addend: 0x0, symName: __Z10TopElementPK5Stack, symObjAddr: 0x130, symBinAddr: 0x100003B60, symSize: 0x5C }
+  - { offsetInCU: 0x2DE, offset: 0x2DE, size: 0x8, addend: 0x0, symName: __Z4pushP5Stacki, symObjAddr: 0x68, symBinAddr: 0x100003A98, symSize: 0x70 }
+  - { offsetInCU: 0x2E6, offset: 0x2E6, size: 0x8, addend: 0x0, symName: __Z3popP5Stacki, symObjAddr: 0xD8, symBinAddr: 0x100003B08, symSize: 0x58 }
+  - { offsetInCU: 0x332, offset: 0x332, size: 0x8, addend: 0x0, symName: __Z6isFullPK5Stack, symObjAddr: 0x44, symBinAddr: 0x100003A74, symSize: 0x24 }
+  - { offsetInCU: 0x33A, offset: 0x33A, size: 0x8, addend: 0x0, symName: __Z4pushP5Stacki, symObjAddr: 0x68, symBinAddr: 0x100003A98, symSize: 0x70 }
+  - { offsetInCU: 0x378, offset: 0x378, size: 0x8, addend: 0x0, symName: __Z7isEmptyPK5Stack, symObjAddr: 0x20, symBinAddr: 0x100003A50, symSize: 0x24 }
+  - { offsetInCU: 0x380, offset: 0x380, size: 0x8, addend: 0x0, symName: __Z6isFullPK5Stack, symObjAddr: 0x44, symBinAddr: 0x100003A74, symSize: 0x24 }
+  - { offsetInCU: 0x3B4, offset: 0x3B4, size: 0x8, addend: 0x0, symName: __Z9StackInitP5Stack, symObjAddr: 0x0, symBinAddr: 0x100003A30, symSize: 0x20 }
+  - { offsetInCU: 0x3BC, offset: 0x3BC, size: 0x8, addend: 0x0, symName: __Z7isEmptyPK5Stack, symObjAddr: 0x20, symBinAddr: 0x100003A50, symSize: 0x24 }
+...
