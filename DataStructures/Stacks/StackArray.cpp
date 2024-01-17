@@ -1,96 +1,70 @@
 #include <iostream>
 using namespace std;
 
-const int N = 1e3 + 10;
-
-class Stack {
+class Stack{
 private:
-    int arr[N];
+    int N;
+    int * arr;
     int top;
-
 public:
-    Stack() : top(-1) {}
-
-    // Check Full and empty
-    bool isEmpty() const {
-        return top == -1;
+    Stack(){ //constructor;
+        top = -1;
+        N = 1e3 + 10; //size
+        arr = new int[N];
     }
-    bool isFull() const {
-        return top == N - 1;
+    ~Stack(){ //destructor
+        delete[] arr;
     }
-
-    // Operations;
-    // push
-    void push(int value) {
-        if (!isFull()) {
-            arr[++top] = value;
-        } else {
-            cout << "Stack Overflow :(\n";
-        }
+    void push(int value){
+        top++;
+        arr[top] = value;
     }
-
-    // pop
-    void pop() {
-        if (!isEmpty()) {
-            top--;
-        } else {
-            cout << "Stack underflow :(\n";
-        }
-    }
-
-    int peek(int value) const {
-        if (!isEmpty()) {
-            return arr[top - value + 1];
-        } else {
-            cout << "Cannot peek \n";
+    int pop(){
+        if(top == -1){
+            cout << "Stack is empty\n";
             return -1;
         }
+        int temp = arr[top];
+        top--;
+        return temp;
     }
-
-    void TopElement() const {
-        if (!isEmpty()) {
-            cout << arr[top] << '\n';
-        } else {
+    int TopElement(){
+        if(top == -1){
             cout << "Stack is empty\n";
+            return -1;
         }
+        return arr[top];
     }
-
-    void display() const {
-        if (!isEmpty()) {
-            for (int i = 0; i <= top; i++) {
-                cout << arr[i] << " ";
-            }
-            cout << '\n';
-        } else {
-            cout << "Stack is empty\n";
-        }
+    int size(){
+        return top + 1;
     }
-    int LastElement() const {
-        if (!isEmpty()) {
-            return arr[0];
-        } else {
-            cout << "Stack is empty\n";
-            return -1; 
+    void display(){
+        if(top == -1){
+            cout << "Stack is Empty\n";
+            return;
         }
+        cout << "Stack elements: ";
+        for(int i = 0; i <= top; i++){
+            cout << arr[i] << " ";
+        }
+        cout << '\n';
     }
 };
 
-int main() {
-    Stack stack;
+int main(void){
+    Stack mystack;
+    mystack.push(10);
+    mystack.push(20);
+    mystack.push(30);
 
-    stack.push(10);
-    stack.push(20);
-    stack.push(30);
+    mystack.display();
 
-    cout << "Stack after push operations: ";
-    stack.display();
+    mystack.pop();
 
-    cout << "Peek 2nd element: " << stack.peek(2) << '\n';
+    mystack.display();
 
-    stack.pop();
-    stack.pop();
+    cout << "Top Element : " << mystack.TopElement();
 
-    cout << "Stack after pop operations: ";
-    stack.display();
+    cout << "\nSize : " << mystack.size();
     return 0;
 }

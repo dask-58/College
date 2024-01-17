@@ -1,67 +1,65 @@
 #include <stdio.h>
-#include <stdbool.h>  
+#include <stdlib.h>
 
-const int N = 1e3 + 10;
-
-typedef struct {
-    int arr[N];
+typedef struct{
+    int *arr;
     int top;
+    int N;
 } Stack;
 
-void StackInit(Stack* stack){
-    stack -> top = -1;
+Stack createStack(){
+    Stack stack;
+    stack.top = -1;
+    stack.N = 1000 + 10; // size
+    stack.arr = (int*)malloc(stack.N * sizeof(int));
+    return stack;
 }
 
-bool isEmpty(const Stack* stack){
-    return stack -> top == -1;
+void push(Stack *stack, int value){
+    stack->top++;
+    stack->arr[stack->top] = value;
 }
 
-bool isFull(const Stack* stack){
-    return stack->top == N - 1;
-}
-
-int push(Stack* stack, int value){
-    if(!isFull(stack)){
-        stack -> arr[++stack -> top] = value;
-        return 0; 
-    }else{
-        printf("Stack Overflow\n");
+int pop(Stack *stack){
+    if(stack -> top == -1){
+        printf("Stack is empty\n");
         return -1;
     }
+    int temp = stack->arr[stack->top];
+    stack -> top--;
+    return temp;
 }
 
-void pop(Stack* stack){
-    if(!isEmpty(stack)){
-        stack -> top--;
-    }else{
-        printf("Stack underflow\n");
+int topElement(Stack *stack){
+    if(stack -> top == -1){
+        printf("Stack is empty\n");
+        return -1;
     }
+    return stack -> arr[stack->top];
 }
 
-int peek(const Stack* stack){
-    if(!isEmpty(stack)){
-        return stack -> arr[stack -> top];
-    }else{
-        printf("Cannot Peek\n");
-        return -1;  
-    }
+int size(Stack *stack){
+    return stack -> top + 1;
 }
 
-void display(const Stack* stack){
-    if(!isEmpty(stack)){
-        for(int i = 0; i <= stack -> top; i++){  
-            printf("%d ", stack -> arr[i]);
-        }
-        printf("\n");
-    }else{
+void display(Stack *stack){
+    if(stack->top == -1){
         printf("Stack is Empty\n");
+        return;
     }
+    printf("Stack elements: ");
+    for(int i = 0; i <= stack -> top; i++){
+        printf("%d ", stack->arr[i]);
+    }
+    printf("\n");
 }
 
-int main(){
-    Stack mystack;
-    StackInit(&mystack);
+void destroyStack(Stack *stack){
+    free(stack -> arr);
+}
 
+int main(void){
+    Stack mystack = createStack();
     push(&mystack, 10);
     push(&mystack, 20);
     push(&mystack, 30);
@@ -72,7 +70,10 @@ int main(){
 
     display(&mystack);
 
-    printf("Peek: %d\n", peek(&mystack));
+    printf("Top Element: %d\n", topElement(&mystack));
 
+    printf("Size: %d\n", size(&mystack));
+
+    destroyStack(&mystack);
     return 0;
 }
