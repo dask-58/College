@@ -4,30 +4,36 @@ using namespace std;
 class Stack{
 private:
     int N;
-    int * arr;
+    int *arr;
     int top;
+
 public:
-    Stack(){ //constructor;
+    Stack(){ //constructor
         top = -1;
-        N = 1e3 + 10; //size
+        N = 1e3 + 10; // size
         arr = new int[N];
     }
-    ~Stack(){ //destructor
+
+    ~Stack(){
         delete[] arr;
     }
+
     void push(int value){
-        top++;
-        arr[top] = value;
+        arr[++top] = value;
+        cout << value << " pushed into the stack\n";
     }
+
     int pop(){
         if(top == -1){
-            cout << "Stack is empty\n";
+            cout << "Stack is empty. Cannot pop.\n";
             return -1;
         }
         int temp = arr[top];
         top--;
+        cout << temp << " popped from the stack\n";
         return temp;
     }
+
     int TopElement(){
         if(top == -1){
             cout << "Stack is empty\n";
@@ -35,16 +41,18 @@ public:
         }
         return arr[top];
     }
+
     int size(){
         return top + 1;
     }
+
     void display(){
-        if(top == -1){
+        if (top == -1) {
             cout << "Stack is Empty\n";
             return;
         }
         cout << "Stack elements: \n";
-        for(int i = top; i >= 0; i--){
+        for (int i = top; i >= 0; i--) {
             cout << '|' << arr[i] << '|' << '\n';
         }
     }
@@ -52,18 +60,43 @@ public:
 
 int main(void){
     Stack mystack;
-    mystack.push(10);
-    mystack.push(20);
-    mystack.push(30);
+    int choice, value;
 
-    mystack.display();
+    while(1){
+        cout << "\n1. Push\n2. Pop\n3. Top Element\n4. Size\n5. Display\n6. Exit\nEnter your choice: ";
+        cin >> choice;
 
-    mystack.pop();
+        switch(choice){
+            case 1:
+                cout << "Enter value to push: ";
+                cin >> value;
+                mystack.push(value);
+                break;
 
-    mystack.display();
+            case 2:
+                mystack.pop();
+                break;
 
-    cout << "Top Element : " << mystack.TopElement();
+            case 3:
+                cout << "Top Element: " << mystack.TopElement() << '\n';
+                break;
 
-    cout << "\nSize : \n" << mystack.size();
+            case 4:
+                cout << "Size: " << mystack.size() << '\n';
+                break;
+
+            case 5:
+                mystack.display();
+                break;
+
+            case 6:
+                cout << "Exiting program...\n";
+                cout << "Program exited.\n";
+                return 0;
+
+            default:
+                cout << "Invalid choice. Try again.\n";
+        }
+    }
     return 0;
 }

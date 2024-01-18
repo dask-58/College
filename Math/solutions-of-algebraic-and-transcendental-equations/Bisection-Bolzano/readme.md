@@ -3,6 +3,9 @@
 **Author:** Dhruv Koli  
 **Created:** 1/17/2024  
 
+#### Image : 
+[Image](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bisection_method.svg/500px-Bisection_method.svg.png)
+
 ## Idea
 
 The algorithm aims to find the root of a function within a given range \([a, b]\).
