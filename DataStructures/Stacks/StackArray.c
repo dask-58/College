@@ -16,8 +16,7 @@ Stack createStack(){
 }
 
 void push(Stack *stack, int value){
-    stack->top++;
-    stack->arr[stack->top] = value;
+    stack->arr[++stack->top] = value;
 }
 
 int pop(Stack *stack){
@@ -47,11 +46,10 @@ void display(Stack *stack){
         printf("Stack is Empty\n");
         return;
     }
-    printf("Stack elements: ");
-    for(int i = 0; i <= stack -> top; i++){
-        printf("%d ", stack->arr[i]);
+    printf("Stack elements: \n");
+    for(int i = stack -> top; i >= 0; i--){
+        printf("|%d|\n", stack -> arr[i]);
     }
-    printf("\n");
 }
 
 void destroyStack(Stack *stack){

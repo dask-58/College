@@ -43,11 +43,10 @@ public:
             cout << "Stack is Empty\n";
             return;
         }
-        cout << "Stack elements: ";
-        for(int i = 0; i <= top; i++){
-            cout << arr[i] << " ";
+        cout << "Stack elements: \n";
+        for(int i = top; i >= 0; i--){
+            cout << '|' << arr[i] << '|' << '\n';
         }
-        cout << '\n';
     }
 };
 
@@ -65,6 +64,6 @@ int main(void){
 
     cout << "Top Element : " << mystack.TopElement();
 
-    cout << "\nSize : " << mystack.size();
+    cout << "\nSize : \n" << mystack.size();
     return 0;
 }
