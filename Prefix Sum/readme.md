@@ -14,10 +14,7 @@ The code is
 
 ---
 
-```cpp
-#include<bits/stdc++.h>
-using namespace std;
-
+```cpp copy
 void solve(){
 	int n;
 	cin >> n;
@@ -37,11 +34,6 @@ void solve(){
 		cout << pref[b] - pref[a-1] << "\n";
 	}
 }
-
-int main(){
-	solve();
-return 0;
-}
 ```
 
 
@@ -51,4 +43,4 @@ The problem can be found  [HERE](https://cses.fi/problemset/task/1646)
 
 ---
 
-> I'll keep updating this readme with more applications of prefix sum..
+> I'll keep updating this with more applications of prefix sum..
