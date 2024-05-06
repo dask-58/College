@@ -26,3 +26,7 @@ It’s necessary that our random numbers meet the criteria :
 
 ### Random Walk
 ![image](https://github.com/dask-58/College/assets/140686560/9cdabac8-0e1f-447f-8213-0a8451be4c44)
+
+### Simple Pendulum
+![image](https://github.com/dask-58/College/assets/140686560/e18345ae-b428-4749-aec4-7a071da0ed9c)
+
