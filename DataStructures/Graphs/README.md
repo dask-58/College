@@ -36,4 +36,4 @@ As we can see that every neighbours of node 4 are visited, so move to the next n
 Now, Queue becomes empty, So, terminate these process of iteration.
 
 
-[implementation](https://github.com/dask-58/College/edit/main/DataStructures/Graphs/bfs.c)
+[implementation](https://github.com/dask-58/College/blob/main/DataStructures/Graphs/bfs.c)
